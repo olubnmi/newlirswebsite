@@ -1,0 +1,81 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block content %}
+    	<!-- Breadcrumb Area -->
+		<div id="cr-breadcrumb-area" class="cr-breadcrumb-area section-padding--md">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-5 col-lg-6 col-md-8">
+						<div class="cr-breadcrumb">
+							<ul class="cr-breadcrumb__pagination">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="blog.html">Blog</a></li>
+								<li>Blog Details</li>
+							</ul>
+							<h1>Blog Details</h1>
+							<p>perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem  </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--// Breadcrumb Area -->
+
+		<!-- Page Conent -->
+		<main class="page-content">
+
+			<!-- BLogs grid -->
+			<div class="cr-section pg-blogs-area section-padding--xlg bg--white">
+				<div class="container">
+					<div class="row">
+                        
+						<!-- Sidebar -->
+						<div class="col-lg-4 order-2 order-lg-1">
+							<div class="widgets sidebar-widgets widgets--left-side">
+								<!-- Single Widget -->
+								
+								<!-- Single Widget -->
+								
+                                
+								<!-- Single Widget -->
+								<section class="single-widget widget-categories">
+									<h6>Quick Links</h6>
+									<ul>
+										<li><a href="blog-with-right-sidebar.html">PUBLICATIONS</a></li>
+										<li><a href="blog-with-right-sidebar.html">TAX LEGISLATIONS</a></li>
+										<li><a href="blog-with-right-sidebar.html">NEWS</a></li>
+										<li><a href="blog-with-right-sidebar.html">GALLERY</a></li>
+										
+									</ul>
+								</section><!--// Single Widget -->
+                                
+								</div>
+						</div><!--// Sidebar -->
+                        
+						<!-- BLog Details -->
+						<div class="col-lg-8 order-1 order-lg-2">
+							<article class="pg-blog">
+								
+								<div class="pg-blog-main">
+									<h2 class="pg-blog-title">{{ article.title}}</h2>
+									<ul class="pg-blog-meta">
+										<li>posted on {{article.posted}}</li>
+									</ul>
+									<div class="pg-blog-content clearfix">
+										<p>{{article.article}}</p>
+										
+									</div>
+								</div>
+							</article>
+							
+							
+								
+							
+						</div><!--// BLog Details -->
+                        
+					</div>
+				</div>
+			</div><!--// BLogs grid -->
+
+{% endblock %}

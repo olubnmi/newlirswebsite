@@ -1,0 +1,516 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+
+<script type="text/javascript">
+	$(document).ready(function() { 
+		var id = '#dialog';
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+		$('#mask').css({'width':maskWidth,'height':maskHeight}); 
+		$('#mask').fadeIn(500); 
+		$('#mask').fadeTo("slow",0.9); 
+			  var winH = $(window).height();
+		var winW = $(window).width();
+			  $(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+		   $(id).fadeIn(2000);  
+		   $('.window .close').click(function (e) {
+		e.preventDefault();
+		$('#mask').hide();
+		$('.window').hide();
+		   });  
+		   $('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	   });  
+	   
+	  });
+</script>
+<style type>
+	#mask {
+		position:absolute;
+		left:0;
+		top:0;
+		z-index:9000;
+		background-color:#26262c;
+		display:none;
+	  }  
+	  #cnt223 .window {
+		position:absolute;
+		left:0;
+		top:0;
+		width:420px;
+		height:618px;
+		display:none;
+		z-index:9999;
+		padding:20px;
+		border-radius: 5px;
+		text-align: center;
+	  }
+	  #cnt223 #dialog {
+		width:450px; 
+		height:auto;
+		padding: 10px 10px 10px 10px;
+		background-color:"";
+		font-size: 15pt;
+	  }
+	  
+	  .agree:hover{
+		background-color: #D1D1D1;
+	  }
+	  .popupoption:hover{
+	   background-color:#D1D1D1;
+	   color: green;
+	  }
+	  .popupoption2:hover{
+	   color: red;
+	  }
+</style>
+
+{% for popup in popups%}
+<div id="{{ popup.category }}">
+<div style="top: 40%; left: 50%; display: none;" id="dialog" class="window"> 
+<a href="#" class="close agree"><img src="{% static 'img/close-icon.png' %}" width="25" style="float:right; margin-right: -25px; margin-top: -20px;"></a>
+<img src="{{ popup.photo_main.url}}" style="width: 500px;"></a>
+</div>
+</div>
+<div style="width: 626px; font-size: 32pt; color:white; height: 352px; display: none; opacity: 0.4;" id="mask"></div>
+</div>
+{% endfor %}
+		<!-- Top Banner -->
+		<!-- Top Banner -->
+		<div class="banner-area">
+			<div class="banner banner-slider-active banner--animated-content">
+				<!-- Single Banner -->
+				<div class="banner__single bg-image--1" data-black-overlay="6">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-7 col-lg-8">
+								<div class="banner__single__content">
+									<h1>WORRIED
+										<span class="color--theme">ABOUT TAX?</span> WE ARE EXPERTS IN
+										<span class="color--theme">TAX</span> SOLUTIONS</h1>
+									<a href="contact.html" class="cr-btn">
+										<span>Contact Now</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //Single Banner -->
+
+				<!-- Single Banner -->
+				<div class="banner__single bg-image--2" data-black-overlay="6">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 offset-lg-2 col-12 offset-0">
+								<div class="banner__single__content text-center">
+									<h1 class="color--theme">DON’T WORRY</h1>
+									<h1>
+										<strong>OUR EXPERT ADVISORS ARE ALWAYS
+											<span class="color--theme">WITH YOU</span>
+										</strong>
+									</h1>
+									<a href="contact.html" class="cr-btn">
+										<span>Contact Now</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //Single Banner -->
+
+				<!-- Single Banner -->
+				<div class="banner__single bg-image--3" data-black-overlay="6">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-7 col-lg-8">
+								<div class="banner__single__content">
+									<h1>WORRIED
+										<span class="color--theme">ABOUT TAX?</span> WE ARE EXPERTS IN
+										<span class="color--theme">TAX</span> SOLUTIONS</h1>
+									<a href="contact.html" class="cr-btn">
+										<span>Contact Now</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //Single Banner -->
+				<!-- Single Banner -->
+				<div class="banner__single bg-image--4" data-black-overlay="6">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-7 col-lg-8">
+								<div class="banner__single__content">
+									<h1>WORRIED
+										<span class="color--theme">ABOUT TAX?</span> WE ARE EXPERTS IN
+										<span class="color--theme">TAX</span> SOLUTIONS</h1>
+									<a href="contact.html" class="cr-btn">
+										<span>Contact Now</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //Single Banner -->
+				<!-- Single Banner -->
+				<div class="banner__single bg-image--5" data-black-overlay="6">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-7 col-lg-8">
+								<div class="banner__single__content">
+									<h1>WORRIED
+										<span class="color--theme">ABOUT TAX?</span> WE ARE EXPERTS IN
+										<span class="color--theme">TAX</span> SOLUTIONS</h1>
+									<a href="contact.html" class="cr-btn">
+										<span>Contact Now</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //Single Banner -->
+
+			</div>
+		</div>
+		<!-- //Top Banner -->
+
+
+		<!-- Page Conent -->
+		<main class="page-content">
+
+			<!-- Features Area -->
+			<section id="features-area" class="cr-section features-area">
+				<div class="row no-gutters">
+
+
+					
+
+					<!-- Single Feature -->
+					<div class="col-lg-4">
+						<div class="feature">
+							<div class="feature__icon">
+								<span>
+									<i class="flaticon-shield"></i>
+								</span>
+								<span>
+									<i class="flaticon-shield"></i>
+								</span>
+							</div>
+							<div class="feature__content">
+								<h4 class="wow fadeInUp">
+									<a href="tax-types.html">Tax Types</a>
+								</h4>
+								<p class="wow fadeInUp" data-wow-delay="0.15s">Defines the various types of tax collected by the different taxation bodies. </p>
+							</div>
+						</div>
+					</div>
+					<!--// Single Feature -->
+
+					<!-- Single Feature -->
+					<div class="col-lg-4">
+						<div class="feature active">
+							<div class="feature__icon">
+								<span>
+									<i class="flaticon-team"></i>
+								</span>
+								<span>
+									<i class="flaticon-team"></i>
+								</span>
+							</div>
+							<div class="feature__content">
+								<h4 class="wow fadeInUp">
+									<a href="tax-systems.html">Tax Systems</a>
+								</h4>
+								<p class="wow fadeInUp" data-wow-delay="0.15s">Describes the methods of Tax Administration which could be Proportional etc</p>
+							</div>
+						</div>
+					</div>
+					<!--// Single Feature -->
+
+					<!-- Single Feature -->
+					<div class="col-lg-4">
+						<div class="feature">
+							<div class="feature__icon">
+								<span>
+									<i class="flaticon-24-hours"></i>
+								</span>
+								<span>
+									<i class="flaticon-24-hours"></i>
+								</span>
+							</div>
+							<div class="feature__content">
+								<h4 class="wow fadeInUp">
+									<a href="tax-collection.html">Tax Collection</a>
+								</h4>
+								<p class="wow fadeInUp" data-wow-delay="0.15s">Tax Collection is the implementation of the measures (Tax Policies and Tax Laws). </p>
+							</div>
+						</div>
+					</div>
+					<!--// Single Feature -->
+
+				</div>
+			</section>
+			<!--// Features Area -->
+
+			<!-- About Area -->
+			<section id="about-area" class="cr-section about-area bg--white section-padding--xlg">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 order-2 order-kg-1">
+							<div class="about-area__content about-area__content--left">
+								<h4>
+									<span class="color--theme">"Efficient and Transparent Process"</span></h4>
+								<h3 class="cd-headline cx-heading slide">
+									<span class="color--theme cd-words-wrapper cd-words-wrapper-2">
+										<b class="is-visible"></b>
+										<b></b>
+										<b></b>
+									</span>
+									</h3>
+								<p>As Lagos State moves towards meeting the needs of a mega city, LIRS continues to position itself as the major funding arm of the state government by putting in place structures that will ensure collection of the proper amount of tax revenue at the least cost. </p>
+								<p></p>
+								<a href="about-us.html" class="cr-readmore">
+									<span>Read More</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-6 order-1 order-lg-2 text-lg-right text-center">
+							<div class="about-area__image about-area__image--right">
+								<img src="{% static 'images/about/about-thumbnail-4.jpg'%}" alt="about area image">
+								<span class="about-area__image__marker"><a href="about-us.html"></a>about lirs</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- //About Area -->
+
+			<!-- Tax Calculation Area -->
+			<section id="tax-calculation" class="tax-calculation-area bg--grey--light">
+				<div class="taxcalc">
+					<div class="row no-gutters align-items-center">
+
+						<!-- Tax Calculation Area Left -->
+						<div class="col-xl-5 col-lg-11">
+							<div class="taxcalc__content" data-black-overlay="4">
+								<div class="taxcalc__content__inner">
+									<h3>tax
+										<span class="color--theme">calculator</span>
+									</h3>
+									<p>calculate your tax for the year</p>
+								</div>
+							</div>
+						</div>
+						<!--// Tax Calculation Area Left -->
+
+						<!-- Tax Calculation Area Right -->
+						<div class="col-xl-7 col-lg-12">
+							<div class="taxcalc__calculation">
+								<div class="taxcalc__calculation__inner">
+									<div class="row no-gutters">
+
+										<div class="col-lg-6 col-md-6 wow fadeInUp">
+											<div class="single-input">
+												<label for="taxcalc-business-area">Choose Your Business Area*</label>
+												<select name="taxcalc-business-area" id="taxcalc-business-area">
+													<option value="1">Select your business</option>
+													<option value="2">Marketing</option>
+													<option value="3">IT Industries</option>
+													<option value="4">Management Industries</option>
+													<option value="5">Property Business</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.15">
+											<div class="single-input">
+												<label for="taxcalc-country-residence">Country of residence*</label>
+												<select name="taxcalc-country-residence" id="taxcalc-country-residence">
+													<option value="1">NIGERIA</option>
+													
+												</select>
+											</div>
+										</div>
+
+										<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3">
+											<div class="single-input">
+												<label for="taxcalc-employee-counter">Number of Employees</label>
+												<select name="taxcalc-employee-counter" id="taxcalc-employee-counter">
+													<option value="1">Select Here</option>
+													<option value="2">0 - 20</option>
+													<option value="3">21 - 50</option>
+													<option value="4">51 - 150</option>
+													<option value="5">151 - 500</option>
+													<option value="6">500+</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.45">
+											<div class="single-input">
+												<label for="taxcalc-tax-year">Tax Year*</label>
+												<select name="taxcalc-tax-year" id="taxcalc-tax-year">
+													<option value="1">2016 - 2020</option>
+													<option value="2">2021 - 2024</option>
+													<option value="3">2025 - 2029</option>
+													
+												</select>
+											</div>
+										</div>
+
+										<div class="col-lg-5 col-md-12 wow fadeInUp" data-wow-delay="0.6">
+											<div class="single-input">
+												<label for="taxcalc-yearly-income">Yearly Total Income</label>
+												<select name="taxcalc-yearly-income" id="taxcalc-yearly-income">
+													<option value="1">Select Range</option>
+													<option value="2">0 - 1 Million</option>
+													<option value="3">1 Million - 3 Million</option>
+													<option value="4">3 Million - 10 Million</option>
+													<option value="5">10 Million - 20 Million</option>
+													<option value="6">20 Million+</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="col-lg-8 col-md-8 wow fadeInUp" data-wow-delay="0.75">
+											<div class="button-holder">
+												<button class="cr-btn" type="submit">
+													<span>Calculate</span>
+												</button>
+												<span class="equal-sign">=</span>
+												<div class="single-input">
+													<label for="taxcalc-total-calculation">Total Payable Tax</label>
+													<input type="text" id="taxcalc-total-calculation" placeholder="₦000.00">
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// Tax Calculation Area Right -->
+
+					</div>
+				</div>
+			</section>
+			<!--// Tax Calculation Area -->
+
+			<!-- Service Area -->
+			<section id="service-area" class="service-area section-padding--xlg bg--white">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-md-10 col-12">
+							<div class="section-title">
+								<h4></h4>
+								<h2>
+									<span class="color--theme"></span>
+								</h2>
+								<p></p>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-start">
+
+
+					<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css /> -->
+					<div class="container">
+					    <div class="row">
+					        <div class="col-md-4 col-sm-6">
+					            <div class="serviceBox">
+					                <div class="service-icon">
+					                    <span><i class="fa fa-user"></i></span>
+					                </div>
+					                <h3 class="title">PERSONAL<span>INCOME TAX</span></h3>
+					                <p class="description">Tax is imposed on individuals who are either in employment or are running their own small businesses, under a business name or partnership.</p>
+					            </div>
+					        </div>
+					        <div class="col-md-4 col-sm-6">
+					            <div class="serviceBox">
+					                <div class="service-icon">
+					                    <span><i class="fa fa-line-chart"></i></span>
+					                </div>
+					                <h3 class="title">CAPITAL <span>GAINS TAX</span></h3>
+					                <p class="description">It is a tax on the profit made from the sale or exchange of capital assets like land shares, machinery.</p>
+					            </div>
+					        </div>
+					        <div class="col-md-4 col-sm-6">
+					            <div class="serviceBox">
+					                <div class="service-icon">
+					                    <span><i class="fa fa-briefcase"></i></span>
+					                </div>
+					                <h3 class="title">STAMP<span>DUTIES</span></h3>
+					                <p class="description">It is a tax imposed on legal instruments/documents executed by individuals, this tax is usually placed on the transfer of homes, buildings, copyrights, land, patents and securities. </p>
+					            </div>
+					        </div>
+					    </div>
+
+					    <div class="row mt-30">
+					        <div class="col-md-4 col-sm-6">
+					            <div class="serviceBox">
+					                <div class="service-icon">
+					                    <span><i class="fa fa-pie-chart"></i></span>
+					                </div>
+					                <h3 class="title">BUSINESS <span>PREMISES LEVY</span></h3>
+					                <p class="description">It is a tax on property used for the production of income including rental houses, office buildings, factories etc.</p>
+					            </div>
+					        </div>
+					        <div class="col-md-4 col-sm-6">
+					            <div class="serviceBox">
+					                <div class="service-icon">
+					                    <span><i class="fa fa-globe"></i></span>
+					                </div>
+					                <h3 class="title">HOTEL OCCUPANCY AND  <span>RESTURANT CONSUMPTION</span></h3>
+					                <p class="description">It is a tax imposed on goods and services consumed in hotels, bars, restaurants and event centres within Lagos State.</p>
+					            </div>
+					        </div>
+
+					        <div class="col-md-4 col-sm-6">
+					            <div class="serviceBox">
+					                <div class="service-icon">
+					                    <span><i class="fa fa-globe"></i></span>
+					                </div>
+					                <h3 class="title">WITHOLDING <span>TAX</span></h3>
+					                <p class="description">It is the specified amount deducted at source from payment accruing or made to individuals or corporate entities.</p>
+					            </div>
+					        </div>
+
+					       
+
+					    </div>
+					</div>
+
+					</div>
+                </div> 
+                
+                
+            </section>
+                
+			<!-- Call To Action Area -->
+			
+
+		</main>
+		<!-- //Page Conent -->
+                
+                
+            </section>
+			<style>
+		.bg-image--1 {
+			background-image: url("{% static 'images/bg/1.jpg' %}");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center; }
+			</style>
+		
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+		
+			{% endblock %}

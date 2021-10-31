@@ -1,0 +1,89 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+
+<!-- Breadcrumb Area -->
+<div id="cr-breadcrumb-area3" class="cr-breadcrumb-area3 section-padding--md">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8">
+                <div class="cr-breadcrumb">
+                    <ul class="cr-breadcrumb__pagination">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="about-us.html">Management</a></li>
+                        <li></li>
+                    </ul>
+                    <h1>Management</h1>
+                    <p>  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--// Breadcrumb Area -->
+
+<!-- Page Conent -->
+<main class="page-content">
+
+    <!-- Advisor Details -->
+    <div class="advisor-details-area bg--white section-padding--xlg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pg-advisor">
+                        <div class="pg-advisor__thumb">
+                            <img src="{% static 'images/advisors/DTA.jpg' %}" alt="Advisor Details Thumb">
+                        </div>
+                        <div class="pg-advisor__details">
+                            <h2>BOLAJI AKINTOLA</h2>
+                            <h5>DIRECTOR TAX AUDIT</h5>
+                            <p>Bolaji Akintola holds a Bachelor of Science Degree in Mathematics, MBA in Taxation and Finance, Diploma in Management Accounting and qualifications in Computer Applications from City and Guild of London Institute. She holds several professional qualifications including FCMA, ACTI, AIPAN & also a Member of CIMA (UK) Business School amongst others. </p>
+                            
+                            <p>She was MD/CEO Payroll Solutions ltd, MD Bismowak Insurance Brokers ltd. Auditor with Threshers Plc (UK). Mortgage Adjudicator at Her Majesty’s Department of Social Security (UK). Her first job was with African Petroleum Plc,(Southern Division, Apapa) after which she worked with Union Bank of Nigeria Plc and later with Lever Brothers Nig Ltd.</p>
+
+                            
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="pg-advisor__experience">	
+                        <h3>EXPERIENCE</h3>
+                        <ul>
+                            <li>
+                                <h6>1 September, 2016  -  present</h6>
+                                <p>DIRECTOR TAX AUDIT.</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="pg-advisor__biography">
+                        <h3>Biography</h3>
+                        <p>She was appointed as Director Tax Audit, to the Board of LIRS on Monday, 20th Sept 2015. She was Head of LIRS Tax Audit Directorate from 19th May 2015 to 19th Sept 2015. She was promoted to Deputy Director, Tax Audit in May 2014. Before then she was Assistant Director Tax Audit, in charge of Tax Audit Field Staff and Hotel Occupancy & Restaurant Consumption (HORC) Tax Audits.
+She has attended several national and international trainings, workshops and conferences, including a comprehensive programme on HM Revenue & Customs Enquiries and Audits.
+</p>
+                        <p></p>
+                        <h4>need any help or consultation?</h4>
+                        <h6>mail us  -  <a href="mailto:info@lirs.gov.ng">info@lirs.gov.ng</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--// Advisor Details -->
+
+<style type="text/css">
+    .cr-breadcrumb-area3 {
+        background-color: #fafafa;
+        background-image: url("{% static 'images/bg/about-bg.jpg'%}");
+        background-size: cover;
+        position: relative; }
+
+        .cta_banner {
+            position: relative;
+            background: url("{% static 'images/design/patterns/pattern-dark.png' %}");
+        }
+</style>
+{% endblock %}

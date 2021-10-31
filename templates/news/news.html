@@ -1,0 +1,74 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+    	<!-- Breadcrumb Area -->
+		<div id="cr-breadcrumb-area2" class="cr-breadcrumb-area2 section-padding--md">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-5 col-lg-6 col-md-8">
+						<div class="cr-breadcrumb">
+							<ul class="cr-breadcrumb__pagination">
+								<li><a href="index-2.html">Home</a></li>
+								<li>Publication</li>
+							</ul>
+							<h1>Publications</h1>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--// Breadcrumb Area -->
+
+	<!-- Page Conent -->
+    <main class="page-content">
+
+        <!-- BLogs grid -->
+        <div class="cr-section pg-blogs-area section-padding--xlg bg--white">
+            <div class="container">
+                    
+                <div class="row pg-blog-area__blogs justify-content-center">
+                    {% for news in news%}
+                    <!-- Single Blog -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <article class="blog sticky">
+                          
+                            <div class="blog__content">
+                                <header class="blog__content__header">
+                                   
+                                    <h4 style="font-size:15px;"><a href="{%url 'article' news.id%}">{{ news.title}}</a></h4>
+                                </header>
+                                <footer class="blog__content__footer">
+                                    <ul class="blog__content__meta">
+                                        <li>posted on {{news.posted}}</li>
+                                        
+                                    </ul>
+                                    <p>{{ news.description}}</p>
+                                    <a href="{% url 'article' news.id%}" class="cr-btn">
+                                    <span>Read More</span>
+                                </a>
+                                </footer>
+                            </div>
+                        </article>
+                    </div><!--// Single Blog -->
+                    {% endfor %}
+                    
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="cr-pagination text-center">
+                            <ul>
+                                <li class="active"><a href="publication.html">1</a></li>
+                                <li><a href="publication.html">2</a></li>
+                                <li><a href="publication.html">3</a></li>
+                                <li><a href="publication.html">4</a></li>
+                                <li><a href="publication.html">5</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div><!--// BLogs grid -->
+
+{% endblock %}

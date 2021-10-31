@@ -1,0 +1,24 @@
+#header{
+    background: rgb(29 136 9 / 93%);
+}
+#branding h1, #branding h1 a:link, #branding h1 a:visited {
+    color: #f9f9f9;
+}
+div.breadcrumbs {
+    background: #f9f9f9;
+}
+div.breadcrumbs a {
+    color: rgb(8, 8, 8);
+}
+.module h2, .module caption, .inline-group h2 {
+    background: #22a53e;
+}
+a:link, a:visited {
+    color: #545454;
+}
+#nav-sidebar .current-app .section:link, #nav-sidebar .current-app .section:visited {
+    color: #f9f9f9;
+    font-weight: bold;
+}
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #04701f;}

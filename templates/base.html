@@ -1,0 +1,412 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Lagos State Internal Revenue Service</title>
+	<meta name="Home" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+	<link rel="apple-touch-icon" href="{% static 'images/icon.png' %}">
+
+	<!-- Google font (font-family: 'Josefin Sans', sans-serif;) -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	
+	<!-- Cusom css -->
+	
+
+	<!-- Modernizer js -->
+	<script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+	<style type="text/css">
+		.serviceBox{
+    color: #888;
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 40px;
+    min-height: 380px;
+}
+.serviceBox .service-icon{
+    color: #fff;
+    background: linear-gradient(45deg, transparent, #2c970d, transparent);
+    font-size: 50px;
+    line-height: 110px;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 30px;
+    border-radius: 50px 0;
+    position: relative;
+    z-index: 1;
+}
+.serviceBox .service-icon:before{
+    content: '';
+    background: linear-gradient(to left, #80f80d, #2c970d);
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    top: 10px;
+    right: 10px;
+    z-index: -1;
+}
+.serviceBox .title{
+    color: #2c970d;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+}
+.serviceBox .description{
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+}
+.serviceBox.blue .service-icon{
+    background: linear-gradient(45deg, transparent, #1c7ac0,transparent);
+}
+.serviceBox.blue .service-icon:before{
+    background: linear-gradient(to left, #2ebef3, #1c7ac0);
+}
+.serviceBox.blue .title{ color: #1c7ac0; }
+.serviceBox.pink .service-icon{
+    background: linear-gradient(45deg, transparent, #db1557, transparent);
+}
+.serviceBox.pink .service-icon:before{
+    background: linear-gradient(to left, #ff2b87, #db1557);
+}
+.serviceBox.pink .title{ color: #db1557; }
+.serviceBox.orange .service-icon{
+    background: linear-gradient(45deg, transparent, #f96407, transparent);
+}
+.serviceBox.orange .service-icon:before{
+    background: linear-gradient(to left, #f98e1b, #f96407);
+}
+.serviceBox.orange .title{ color: #f96407; }
+@media only screen and (max-width: 990px){
+    .serviceBox{ margin: 0 0 30px; }
+}
+
+
+
+	</style>
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<!-- Add your site or application content here -->
+
+	<div class="fakeloader"></div>
+
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="header sticky--header">
+
+			<!-- Header Top Area -->
+			<div class="header__top bg--green">
+				<div class="container">
+					<div class="header__top__inner">
+						<ul class="header__top__info">
+							<li>
+								<a href="#">
+									<i class="flaticon-old-typical-phone"></i> 0700 2255 5477</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="flaticon-black-back-closed-envelope-shape"></i> info@lirs.gov.ng</a>
+							</li>
+						</ul>
+						<div class="header__top__button">
+							<a class="cr-btn cr-btn--lg" href="http://etax.lirs.net">
+								<span>Etax</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--// Header Top Area -->
+
+			<!-- Header Bottom Area -->
+			<div class="header__bottom bg--white">
+				<div class="container d-none d-lg-block">
+					<div class="header__bottom__inner">
+						<div class="header__logo">
+							<a href="index-2.html">
+								<img src="{% static 'images/logo/logo-theme.png'%}" alt="header logo">
+							</a>
+						</div>
+
+						<!-- Main Navigation -->
+						<nav id="main-navigation" class="header__menu main-navigation">
+							<ul>
+								<li>
+									<a href="{% url 'index'%}">HOME</a>
+                                </li>    								
+								
+								<li>
+									<a href="{% url 'about' %}">ABOUT</a>
+								</li>
+								<li>
+									<a href="{% url 'faq' %}">FAQ</a>
+								</li>
+								<li class="cr-dropdown">
+									<a href="tax-information.html">TAX INFORMATION</a>
+									<ul class="cr-dropdown-menu">
+										<li>
+											<a href="tax-types.html">Tax Types</a>
+										</li>
+										<li>
+											<a href="tax-systems.html">Tax Systems</a>
+										</li>
+										<li>
+											<a href="tax-collection.html">Tax Collection</a>
+										</li>
+                                        <li>
+											<a href="tax-legislation.html">Tax Legislations</a>
+										</li>
+                                        <li>
+											<a href="revenue.html">Revenue Code</a>
+										</li>
+                                        <li>
+											<a href="agency.html">Agency Code</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="{% url 'publications' %}">PUBLICATIONS</a>
+                                </li>    
+									
+                                <li>
+									<a href="contact.html">CONTACT</a>
+								</li>
+								
+								
+							</ul>
+						</nav>
+						<!--// Main Navigation -->
+
+					</div>
+				</div>
+
+				<!-- Mobile Menu -->
+				<div class="container d-block d-lg-none">
+					<div class="mobile-menu clearfix d-md-block d-lg-none">
+						<a class="mobile-logo" href="index-2.html">
+							<img src="{% static 'images/logo/logo-theme.png' %}" alt="logo">
+						</a>
+					</div>
+				</div>
+				<!-- //Mobile Menu -->
+
+			</div>
+			<!--// Header Bottom Area -->
+
+		</header>
+		<!-- //Header -->
+		
+				
+		{% block content %} {% endblock %}
+                
+			<!-- Call To Action Area -->
+			<section id="cta-area" class="cta-area section-padding--sm bg--grey--light bg--abstruct-mask">
+
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-10 offset-lg-1 col-md-12 offset-0">
+							<div class="calltoaction text-center">
+								<h3>NEED ANY HELP WITH
+									<span class="color--theme"> YOUR TAX ISSUES?</span>
+								</h3>
+								<p>Please call our customer support center </p>
+								<h6>JUST DIAL
+									<a href="callto://070022555477">0700-2255-5477</a> (TOLL FREE)</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// Call To Action Area -->
+
+		</main>
+		<!-- //Page Conent -->
+
+		<!-- Footer Area -->
+		<footer id="footer" class="footer-area fixed--footer">
+
+			<!-- Footer Widgets Area -->
+			<div class="footer-area__widgets section-padding--md bg--dark--light">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="footer-area__logo text-center">
+								<a href="index-2.html">
+									<img src="{% static 'images/logo/logo-footer.png' %}" alt="footer logo">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="widget-area footer--widgets">
+
+						<!-- Single Widget -->
+						<section class="widget widget-about">
+							<h5 class="widget-title">ABOUT LIRS</h5>
+							<p>LIRS is the operational arm of the Lagos State Government responsible for the collection of taxes and other revenues.</p>
+							<div class="social-icons social-icons--rounded">
+								<ul>
+									<li class="facebook">
+										<a href="https://www.facebook.com/">
+											<i class="fa fa-facebook"></i>
+										</a>
+									</li>
+									<li class="twitter">
+										<a href="https://twitter.com/">
+											<i class="fa fa-twitter"></i>
+										</a>
+									</li>
+									<li class="instagram">
+										<a href="https://www.instagram.com/">
+											<i class="fa fa-instagram"></i>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+						</section>
+						<!--// Single Widget -->
+
+						<!-- Single Widget -->
+						<section class="widget widget-quick-links">
+							<h5 class="widget-title">QUICK LINKS</h5>
+							<ul>
+								<li>
+									<a href="tax-information.html">Tax Information</a>
+								</li>
+								<li>
+									<a href="faq.html">FAQ</a>
+								</li>
+								<li>
+									<a href="about-us.html">About Us</a>
+								</li>
+								<li>
+									<a href="covid-19.html">COVID-19</a>
+								</li>
+								<li>
+									<a href="contact.html">Contact Us</a>
+								</li>
+							</ul>
+						</section>
+						<!--// Single Widget -->
+
+						<!-- Single Widget -->
+						<section class="widget widget-twitter-feed">
+							<h5 class="widget-title">Twitter Feed</h5>
+							<ul>
+								<li>
+									<p>
+										<a href="#">@Alex Smith</a>, unde omnis te us error sit voluptatem</p>
+									<span class="time">
+										<a href="#">10 Mins ago</a>
+									</span>
+								</li>
+								<li>
+									<p>
+										<a href="#">@Justin Bieber</a>, unde omnis te us error sit voluptatem</p>
+									<span class="time">
+										<a href="#">12 Mins ago</a>
+									</span>
+								</li>
+							</ul>
+						</section>
+						<!--// Single Widget -->
+
+						<!-- Single Widget -->
+						<section class="widget widget-contact-info">
+							<h5 class="widget-title">Contact Info</h5>
+							<ul>
+								<li><p>The Good Sheperd Building, Opposite Lagos Secretariat Main Gate</p></li>
+								<li>
+									<p><a href="callto://070022555477">0700-2255-5477</a></p>
+									
+								</li>
+								<li>
+									<p><a href="mailto://info@lirs.gov.ng">info@lirs.gov.ng</a></p>
+									<p><a href="lagosstate.gov.ng">www.lagosstate.gov.ng</a></p>
+								</li>
+							</ul>
+						</section>
+						<!--// Single Widget -->
+
+					</div>
+				</div>
+			</div>
+			<!--// Footer Widgets Area -->
+
+			<!-- Footer Copyright Area -->
+			<div class="footer-area__copyright bg--dark">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="copyright text-center">
+								©COPYRIGHT, ALL RIGHTS RESERVED BY
+								<a href="https://lirs.gov.ng/">LIRS</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--// Footer Copyright Area -->
+
+		</footer>
+		<!-- //Footer Area -->
+
+	</div>
+	<!-- //Main wrapper -->
+
+	<!-- JS Files -->
+	<script src="{% static 'js/vendor/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/plugins.js' %}"></script>
+	<script src="{% static 'js/active.js' %}"></script>
+	<script src="{% static 'js/scripts.js' %}"></script>
+	<style type="text/css">
+
+	.bg--abstruct-mask {
+		position: relative; }
+		.bg--abstruct-mask:before, .bg--abstruct-mask:after {
+		  content: "";
+		  top: 0;
+		  height: 100%;
+		  width: 25%;
+		  position: absolute;
+		  background-size: cover; }
+		.bg--abstruct-mask:before {
+		  left: 0;
+		  background: url("{% static 'images/bg/abstruct-mask-left.png' %}") no-repeat scroll;
+		  background-position: center center; }
+		.bg--abstruct-mask:after {
+		  right: 0;
+		  background: url("{% static 'images/bg/abstruct-mask-right.png' %}") no-repeat scroll;
+		  background-position: center center; }
+		.bg--abstruct-mask > div {
+		  position: relative; }
+		</style>	
+</body>
+
+
+
+</html>

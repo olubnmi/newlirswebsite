@@ -1,0 +1,104 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+
+<!-- Breadcrumb Area -->
+<div id="cr-breadcrumb-area3" class="cr-breadcrumb-area3 section-padding--md">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8">
+                <div class="cr-breadcrumb">
+                    <ul class="cr-breadcrumb__pagination">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="about-us.html">Management</a></li>
+                        <li></li>
+                    </ul>
+                    <h1>Management</h1>
+                    <p>  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--// Breadcrumb Area -->
+
+<!-- Page Conent -->
+<main class="page-content">
+
+    <!-- Advisor Details -->
+    <div class="advisor-details-area bg--white section-padding--xlg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pg-advisor">
+                        <div class="pg-advisor__thumb">
+                            <img src="{% static 'images/advisors/DA.jpg' %}" alt="Advisor Details Thumb">
+                        </div>
+                        <div class="pg-advisor__details">
+                            <h2>MARUF TIJANI</h2>
+                            <h5>Director Finance & Accounts</h5>
+                            <p>Maruf Tijani holds a Bachelor of Science Degree in Accounting from Ogun State University, Ago Iwoye and is a Fellow of the Institute of Chartered Accountants of Nigeria (FCA) and an Associate of the Chartered Institute of Taxation.
+He joined Lagos State Civil Service in 1989 and has risen steadily through the ranks holding various positions in Finance and Accounts. He became a Senior Accountant in 1998 and rose to Chief Accountant in 2007. </p>
+                            
+                            <p>In 2010, he was promoted to Assistant Director and in 2011 was deployed from the State Treasury Office to the Lagos State House of Assembly as Head of Accounts. He was promoted to Deputy Director in 2014.</p>
+
+                            
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="pg-advisor__experience">	
+                        <h3>EXPERIENCE</h3>
+                        <ul>
+                            <li>
+                                <h6>15 september, 2015  -  present</h6>
+                                <p>Director Finance & Accounts LIRS.</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="pg-advisor__biography">
+                        <h3>Biography</h3>
+                        <p>Mr. Tijani is a consummate technocrat and has held senior roles in several government agencies as listed below;
+· Central Licensing Authority
+· Board of Internal Revenue
+· LASTMA
+· Lagos State Waterfront & Tourism Agency
+· State Treasury Office
+· Lagos State House of Assembly
+
+He was deployed to Lagos State Internal Revenue Service as Director, Finance and Accounts in September 2015. He is happily married and blessed with lovely children.
+</p>
+                        <p></p>
+                        <h4>need any help or consultation?</h4>
+                        <h6>mail us  -  <a href="mailto:info@lirs.gov.ng">info@lirs.gov.ng</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--// Advisor Details -->
+
+    
+    </section>
+    <!--// Call To Action Area -->
+
+</main>
+<!-- //Page Conent -->
+
+<style type="text/css">
+    .cr-breadcrumb-area3 {
+        background-color: #fafafa;
+        background-image: url("{% static 'images/bg/about-bg.jpg'%}");
+        background-size: cover;
+        position: relative; }
+
+        .cta_banner {
+            position: relative;
+            background: url("{% static 'images/design/patterns/pattern-dark.png' %}");
+        }
+</style>
+{% endblock %}

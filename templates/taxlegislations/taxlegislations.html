@@ -1,0 +1,82 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+    	<!-- Breadcrumb Area -->
+		<div id="cr-breadcrumb-area" class="cr-breadcrumb-area section-padding--md">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-5 col-lg-6 col-md-8">
+						<div class="cr-breadcrumb">
+							<ul class="cr-breadcrumb__pagination">
+								<li><a href="index-2.html">Home</a></li>
+								<li>Tax Legislation</li>
+							</ul>
+							<h1>Tax Legislations</h1>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--// Breadcrumb Area -->
+
+	<!-- Page Conent -->
+    <main class="page-content">
+
+        <!-- BLogs grid -->
+        <div class="cr-section pg-blogs-area section-padding--xlg bg--white">
+            <div class="container">
+                    
+                <div class="row pg-blog-area__blogs justify-content-center">
+                    {% for taxlegislation in taxlegislations%}
+                    <!-- Single Blog -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <article class="blog sticky">
+                            <div class="blog__thumb">
+                                <a href="blog-details.html">
+                                    <img src="{{ taxlegislation.photo_main.url}}" alt="blog thumb">
+                                </a>
+                            </div>
+                            <div class="blog__content">
+                                <header class="blog__content__header">
+                                    <ul class="blog__content__categories">
+                                        <li><a href="blog-right-sidebar.html">Tax</a></li>
+                                        <li><a href="blog-right-sidebar.html">Personal Tax</a></li>
+                                    </ul>
+                                    <h4><a href="blog-details.html">{{ taxlegislation.title}}</a></h4>
+                                </header>
+                                <footer class="blog__content__footer">
+                                    <ul class="blog__content__meta">
+                                        <li>October 28.</li>
+                                        <li><a href="blog-right-sidebar.html">LIRS</a></li>
+                                        <li><a href="blog-right-sidebar.html"></a></li>
+                                    </ul>
+                                    <p>{{ taxlegislation.description}}</p>
+                                    <a href="{{ taxlegislation.docu_main.url }}" class="cr-btn">
+                                    <span>Read More</span>
+                                </a>
+                                </footer>
+                            </div>
+                        </article>
+                    </div><!--// Single Blog -->
+                    {% endfor %}
+                    
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="cr-pagination text-center">
+                            <ul>
+                                <li class="active"><a href="publication.html">1</a></li>
+                                <li><a href="publication.html">2</a></li>
+                                <li><a href="publication.html">3</a></li>
+                                <li><a href="publication.html">4</a></li>
+                                <li><a href="publication.html">5</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div><!--// BLogs grid -->
+
+{% endblock %}

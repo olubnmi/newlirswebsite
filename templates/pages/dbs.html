@@ -1,0 +1,89 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+
+<!-- Breadcrumb Area -->
+<div id="cr-breadcrumb-area3" class="cr-breadcrumb-area3 section-padding--md">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8">
+                <div class="cr-breadcrumb">
+                    <ul class="cr-breadcrumb__pagination">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="about-us.html">Management</a></li>
+                        <li></li>
+                    </ul>
+                    <h1>Management</h1>
+                    <p>  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--// Breadcrumb Area -->
+
+<!-- Page Conent -->
+<main class="page-content">
+
+    <!-- Advisor Details -->
+    <div class="advisor-details-area bg--white section-padding--xlg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pg-advisor">
+                        <div class="pg-advisor__thumb">
+                            <img src="{% static 'images/advisors/BS.jpg' %}" alt="Advisor Details Thumb">
+                        </div>
+                        <div class="pg-advisor__details">
+                            <h2>FOLASADE COKER-AFOLAYAN</h2>
+                            <h5>BOARD SECRETARY</h5>
+                            <p>Folashade Coker – Afolayan is a Law graduate from the Ogun State University Ago – Iwoye and she holds a B.L. from the Nigerian Law School. She also obtained a Masters degree in Law from the University of Lagos with Specialization in Tax Distrain and Enforcement Procedures.
+She started her Legal Career as an associate in the Chambers of Toye Coker & Co.and thereafter joined the Lagos State Civil Service as a State Counsel (Civil Litigation) Lagos State Ministry of Justice. She was seconded to Lagos State Board of Internal Revenue as an Assistant Legal Adviser in 2003. </p>
+                            
+                            <p>She has served in various committees, which have helped in building a robust platform for tax administration in Lagos State. She rose through the ranks at the Lagos State Internal Revenue Service and served in various capacities including; Assistant Legal Adviser, Head of Distrain and Enforcement/ Criminal Prosecution and Assistant Director Tax Audit.</p>
+
+                            
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="pg-advisor__experience">	
+                        <h3>EXPERIENCE</h3>
+                        <ul>
+                            <li>
+                                <h6>1 September, 2016  -  present</h6>
+                                <p>BOARD SECRETARY LIRS.</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="pg-advisor__biography">
+                        <h3>Biography</h3>
+                        <p>She was appointed Director, Personal Income Tax in September 2015.
+She is a member of the International Bar Association, Nigerian Bar Association and a Fellow of the Chartered Institute of Taxation of Nigeria. She has also attended various international tax training, seminars and conferences, with a view to making tax administration in Lagos State at par with International Best Practice.
+</p>
+                        <p></p>
+                        <h4>need any help or consultation?</h4>
+                        <h6>mail us  -  <a href="mailto:info@lirs.gov.ng">info@lirs.gov.ng</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--// Advisor Details -->
+<style type="text/css">
+    .cr-breadcrumb-area3 {
+        background-color: #fafafa;
+        background-image: url("{% static 'images/bg/about-bg.jpg'%}");
+        background-size: cover;
+        position: relative; }
+
+        .cta_banner {
+            position: relative;
+            background: url("{% static 'images/design/patterns/pattern-dark.png' %}");
+        }
+</style>
+{% endblock %}

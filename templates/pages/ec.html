@@ -1,0 +1,97 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+
+<!-- Breadcrumb Area -->
+<div id="cr-breadcrumb-area3" class="cr-breadcrumb-area3 section-padding--md">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8">
+                <div class="cr-breadcrumb">
+                    <ul class="cr-breadcrumb__pagination">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="about-us.html">Management</a></li>
+                        <li></li>
+                    </ul>
+                    <h1>Management</h1>
+                    <p>  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--// Breadcrumb Area -->
+
+<!-- Page Conent -->
+<main class="page-content">
+
+    <!-- Advisor Details -->
+    <div class="advisor-details-area bg--white section-padding--xlg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pg-advisor">
+                        <div class="pg-advisor__thumb">
+                            <img src="{% static 'images/advisors/EC.jpg' %}" alt="Advisor Details Thumb">
+                        </div>
+                        <div class="pg-advisor__details">
+                            <h2>HAMZAT AYODELE SUBAIR</h2>
+                            <h5>Executive Chairman</h5>
+                            <p>Hamzat Ayodele Subair obtained his first degree as a Bachelor of Arts in Economics from Metropolitan University of Manchester (Formerly Manchester Polytechnic), England in 1982. He also obtained a Masters degree in Business Administration at the University of Lagos in 1995. </p>
+                            
+                            <p>He started his professional career at the international firm of Price Waterhouse (Chartered Accountants) in 1982. His portfolio of clients covered various industries including Government and Non-Government organizations, Banking, Oil & gas exploration and oil service companies, Insurance companies, Trading concerns, Multinational courier and logistics companies, Securities companies, Finance, Investment and Leasing companies and Manufacturing concerns.</p>
+
+                            
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="pg-advisor__experience">	
+                        <h3>EXPERIENCE</h3>
+                        <ul>
+                            <li>
+                                <h6>1 September, 2016  -  present</h6>
+                                <p>Executive Chairman LIRS.</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="pg-advisor__biography">
+                        <h3>Biography</h3>
+                        <p>In 1987 he joined Hamzat Subair, Folami & Co Chartered Accountants as a Manager and then Partner where his taxation and management consultancy experience spanned across Shipping agencies, Publishing companies, Hotel & catering entities, Computer consulting outfits, Farming projects, a Mineral water bottling company and Aviation sector companies.
+</p>
+                        <p>He is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN) and Chartered Institute of Taxation of Nigeria. He is also an Associate of the Business Recovery & Insolvency Practitioners Association of Nigeria (BRIPAN). He has sat on the Board of various Government and Non-Government Institutions, Firms and Associations, including being the Chairman of an Insurance company. He served as a pioneer Director of the Lagos State Lotteries Board, which was charged with overseeing the transition from manual or land based systems to online and regulating web based gaming activities.
+He has served as the Country Representative and the Project Coordinator of the Centre for the Development of Enterprise (CDE) and Proinvest. He also has consulted for international agencies such as the International Finance Corporation (IFC) through the Africa Project Development Facility (APDF), where he was assigned to work with potential investors in developing business plans, diagnostic review of internal control structures, and the performance of financial due diligence of companies involved in certain development projects.
+He continued and remained as Managing Partner at Hamzat Subair & Co, Chartered Accountants, Tax and Management Consultants from 1996 until when he was appointed Executive Chairman of the Lagos State Internal Revenue Service in September 2016.</p>
+                        <h4>need any help or consultation?</h4>
+                        <h6>mail us  -  <a href="mailto:info@lirs.gov.ng">info@lirs.gov.ng</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--// Advisor Details -->
+
+    
+    </section>
+    <!--// Call To Action Area -->
+
+</main>
+<!-- //Page Conent -->
+
+<style type="text/css">
+    .cr-breadcrumb-area3 {
+        background-color: #fafafa;
+        background-image: url("{% static 'images/bg/about-bg.jpg'%}");
+        background-size: cover;
+        position: relative; }
+
+        .cta_banner {
+            position: relative;
+            background: url("{% static 'images/design/patterns/pattern-dark.png' %}");
+        }
+</style>
+{% endblock %}

@@ -1,0 +1,434 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+
+<!-- Breadcrumb Area -->
+<div id="cr-breadcrumb-area3" class="cr-breadcrumb-area3 section-padding--md">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8">
+                <div class="cr-breadcrumb">
+                    <ul class="cr-breadcrumb__pagination">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="about-us.html">Management</a></li>
+                        <li></li>
+                    </ul>
+                    <h1>Management</h1>
+                    <p>  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--// Breadcrumb Area -->
+
+<!-- Page Conent -->
+<main class="page-content">
+
+    <!-- Pg Contact -->
+    <div class="pg-contact bg--white">
+        <div class="google-map-wrapper">
+            <div id="google-map" class="google-map"></div>
+            <div class="container" style="margin-left: 15px;">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-9">
+                        <div class="pg-contact__content">
+                            <h1   class="marker_title">say hello to us</h1>
+                            <p> </p>
+                            <div class="pg-contact__blocks">
+                                <div class="single-block address">
+                                    <h6>address</h6>
+                                    <div id="address-div">
+                                        <p>The Good Sheperd House, Block H, Plot H1</p>
+                                        <p>Central Business District</p>
+                                        <p>Opposite Lagos Secretariat Main Gate</p>
+                                        <p>Alausa Ikeja, Lagost State</p>
+                                    </div>
+                                </div>
+                                <div class="single-block phone">
+                                    <h6>Phone</h6>
+                                    <p><a href="#">0700-2255-5477</a></p>
+                                    
+                                </div>
+                                <div class="single-block web">
+                                    <h6>Web</h6>
+                                    <p><a href="mailto">info@lirs.gov.ng</a></p>
+                                    <p><a href="lagosstate.gov.ng">www.lagosstate.gov.ng</a></p>
+                                </div>
+                            </div>
+                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!--// Pg Contact -->
+
+        <!-- Contact Form -->
+        <div class="pg-contact-form-area bg--white section-padding--xlg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-12">
+                        <div class="pg-appintment">
+                            <div class="pg-appintment__title">
+                                <h2>SEND A MESSAGE</h2>
+                            </div>
+                            <div class="pg-appintment__box">
+                                <form id="contact-form" action="http://demo.hasthemes.com/korde/korde/mail.php" method="POST">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-input">
+                                                <input type="text" name="name" id="name" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-input">
+                                                <input type="email" name="email" id="email" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-input">
+                                                <input type="text" name="subject" id="subject"  placeholder="Subject">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-input">
+                                                <input type="text" name="phone" id="phone"  placeholder="Phone">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="single-input">
+                                                <textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="single-input button text-left">
+                                                <button type="submit" class="cr-btn"><span>Submit</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <p class="form-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-12 d-none d-lg-block">
+                        <div class="pg-contact-img ml-xl-5 ml-0">
+                            <img src="images/others/contact-image.jpg" alt="contact image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--// Contact Form -->
+<style type="text/css">
+    .cr-breadcrumb-area3 {
+        background-color: #fafafa;
+        background-image: url("{% static 'images/bg/about-bg.jpg'%}");
+        background-size: cover;
+        position: relative; }
+
+        .cta_banner {
+            position: relative;
+            background: url("{% static 'images/design/patterns/pattern-dark.png' %}");
+        }
+</style>
+
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCElIGLAl8ci6jQKxepx6K2x4okK6Kw_VI"></script>
+	<script>
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+    
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed out you want the map to start at (always required)
+                zoom: 11.9,
+
+                scrollwheel: false,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(6.5480551, 3.2839596), // Lagos
+
+                // How you would like to style the map. 
+                // This is where you would paste any style found on
+
+                styles:[
+				    {
+				        "featureType": "water",
+				        "elementType": "geometry",
+				        "stylers": [
+				            {
+				                "color": "#e9e9e9"
+				            },
+				            {
+				                "lightness": 17
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "landscape",
+				        "elementType": "geometry",
+				        "stylers": [
+				            {
+				                "color": "#f5f5f5"
+				            },
+				            {
+				                "lightness": 20
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "road.highway",
+				        "elementType": "geometry.fill",
+				        "stylers": [
+				            {
+				                "color": "#ffffff"
+				            },
+				            {
+				                "lightness": 17
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "road.highway",
+				        "elementType": "geometry.stroke",
+				        "stylers": [
+				            {
+				                "color": "#ffffff"
+				            },
+				            {
+				                "lightness": 29
+				            },
+				            {
+				                "weight": 0.2
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "road.arterial",
+				        "elementType": "geometry",
+				        "stylers": [
+				            {
+				                "color": "#ffffff"
+				            },
+				            {
+				                "lightness": 18
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "road.local",
+				        "elementType": "geometry",
+				        "stylers": [
+				            {
+				                "color": "#ffffff"
+				            },
+				            {
+				                "lightness": 16
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "poi",
+				        "elementType": "geometry",
+				        "stylers": [
+				            {
+				                "color": "#f5f5f5"
+				            },
+				            {
+				                "lightness": 21
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "poi.park",
+				        "elementType": "geometry",
+				        "stylers": [
+				            {
+				                "color": "#dedede"
+				            },
+				            {
+				                "lightness": 21
+				            }
+				        ]
+				    },
+				    {
+				        "elementType": "labels.text.stroke",
+				        "stylers": [
+				            {
+				                "visibility": "on"
+				            },
+				            {
+				                "color": "#ffffff"
+				            },
+				            {
+				                "lightness": 16
+				            }
+				        ]
+				    },
+				    {
+				        "elementType": "labels.text.fill",
+				        "stylers": [
+				            {
+				                "saturation": 36
+				            },
+				            {
+				                "color": "#333333"
+				            },
+				            {
+				                "lightness": 40
+				            }
+				        ]
+				    },
+				    {
+				        "elementType": "labels.icon",
+				        "stylers": [
+				            {
+				                "visibility": "off"
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "transit",
+				        "elementType": "geometry",
+				        "stylers": [
+				            {
+				                "color": "#f2f2f2"
+				            },
+				            {
+				                "lightness": 19
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "administrative",
+				        "elementType": "geometry.fill",
+				        "stylers": [
+				            {
+				                "color": "#fefefe"
+				            },
+				            {
+				                "lightness": 20
+				            }
+				        ]
+				    },
+				    {
+				        "featureType": "administrative",
+				        "elementType": "geometry.stroke",
+				        "stylers": [
+				            {
+				                "color": "#fefefe"
+				            },
+				            {
+				                "lightness": 17
+				            },
+				            {
+				                "weight": 1.2
+				            }
+				        ]
+				    }
+				]
+            };
+
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('google-map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            var locations = [
+			      ['The Good Sheperd<br> Building LIRS HQ' , 'Good Shepherd Building Opposite Lagos State Secretariat Main Gate<br>Alausa ', 6.6175094, 3.3593347],
+			      ['Lirs Station Oba Kran', 'Plot 21, Oba Akran Avenue, Ikeja<br>Lagos ', 6.6080303, 3.3394733],
+			      ['Tax Audit Field 1', 'Plot A, Blk 12 Elephant Cement Way, Opp Lagos State Secretariat Mosque, Ikeja<br> Lagos', 6.6181116, 3.3566513],
+			      ['Tax Audit Field 2', 'Oluwalogbon House, Plot A, Obafemi Awolowo Way, Ikeja<br> Lagos', 6.6135977, 3.352492],
+			      ['Lirs Tax Station Aguda', 'Eco Bank Plc Building, 3A & B Enitan Street, Aguda<br>Lagos',6.496219, 3.338901],
+			      ['Lirs Tax Station Agege', '240, Ipaja Road, Abekoko B/Stop, Agege<br>Lagos', 6.6254361, 3.3042774],
+			      ['Lirs Tax Station Ajegunle', '7/9, Dele Bakare Street, by Trinity Bus Street, Off Lagos-Apapa Express Way<br>Lagos', 6.4426843, 3.324355],
+			      ['Lirs Tax Station Akowonjo', '166, Akowonjo Road, By Cele Bus-Stop, Beside Keystone Bank, Akowonjo<br>Lagos', 6.6024414, 3.3066506],
+			      ['Lirs Tax Station Alakuko', 'FACCO Building. 29, Lagos-Abeokuta Exp. Way, By Meiran Bus Stop<br>Lagos', 6.6360473, 3.2833345],
+			      ['Lirs Tax Station Apapa', '2, Plateau Road, Apapa<br>Lagos', 6.438948, 3.367055],
+			      ['Lirs Tax Station Badagry', '1, Zoglo Way, Beside Town Hall, Badagry<br>Lagos', 6.413753, 2.880604],
+			      ['Lirs Tax Station City Hall','3rd Floor, City Hall Complex, Catholic Mission Street, Lagos-Island<br>Lagos', 6.4502057, 3.3950706],
+			      ['Lirs Tax Station Egbe','73, Isolo Road, By Ejigbo Bus Stop, Beside Forte Oil Filling Station Egbe<br>Lagos', 6.5286798, 3.3441324],
+			      ['Lirs Tax Station Epe','G.R.A  Road, Oke-Oyinbo, Epe<br>Lagos', 6.5828699, 3.6479072],
+			      ['Lirs Tax Station Festac/Amuwo','Plot 129, Block 10,Amuwo Odofin Residential Scheme, By Festac Link Road,Amuwo Odofin<br>Lagos', 6.4754905, 3.3046346],
+			      ['Lirs Tax Station Iju','73, College Road, Ifako-Agege<br>Lagos', 6.640439, 3.3293816],
+			      ['Lirs Tax Station Ikeja','Block 9, Old Secretariat, Oba Akinjobi Street, Ikeja<br>Lagos', 6.5863187, 3.3445092],
+			      ['Lirs Tax Station Ikorodu','64, Lagos Road, Ikorodu<br>Lagos', 6.6102283, 3.5124749],
+			      ['Lirs Tax Station Ikoyi','25, Biaduo Street, Off Keffi Street, Ikoyi<br>Lagos', 6.4441491, 3.4118401],
+			      ['Lirs Tax Station Ilupeju','13, Town Planning Way, Ilupeju<br>Lagos', 6.5568369, 3.361685],
+			      ['Lirs Tax Station Imota','77, Imota/Itoikin Road, By Ile-Omi Bus Stop, Imota Town<br>Lagos', 6.6677829, 3.6633396],
+			      ['Lirs Tax Station Jebba before','117, Apapa Road, Ebute-Metta<br>Lagos', 6.4817112, 3.3716489],
+			      ['Lirs Tax Station Ketu','582, Ikorodu Road, Ketu<br>Lagos', 6.605763, 3.3904799],
+			      ['Lirs Tax Station Lekki','Access Bank Plc Building. Chevron/4th Roundabout, Lekki-Epe Road<br>Lagos', 6.4624134, 3.4674188],
+                  ['Lirs Tax Station Lekki 2','UBA Bank Plc. 8a,Admiralty Way, Lekki<br>Lagos', 6.4474511, 3.4675038],
+                  ['Lirs Tax Station Mushin','107, Agege Motor Road, Idi-Oro B/Stop, Idi-Oro<br>Lagos', 6.5238132, 3.3597334],
+                  ['Lirs Tax Station Ogba','Kitchen Towers. Plot 3, Block F, Omole/Ogba Junction, Ikeja<br>Lagos', 6.6341774, 3.350661],
+                  ['Lirs Tax Station Ojo','18, Ojo-Igbede, Sunny B/Stop; Alaba International Market<br>Lagos', 6.4611033, 3.1861363],
+                  ['Lirs Tax Station Olowogbowo','31, Oke Olowogbowo Street, Lagos-Island<br>Lagos', 6.4585243, 3.3786624],
+                  ['Lirs Tax Station Oregun','Parabeam House. 89,Kudirat Abiola Way<br>Oregun', 6.6030016, 3.3603181],
+                  ['Lirs Tax Station Oshodi','Wema Bank Plc, Oshodi Branch. 435, Agege Motor Road, Bolade Oshodi<br>Lagos', 6.5638582, 3.3461218],
+                  ['Lirs Tax Station Oyingbo','Sterling Bank Building, 260-262 Herbert Macaulay Road, Yaba<br>Lagos', 6.5014354, 3.3755141],
+                  ['Lirs Tax Station Ibeju','Connect Centre Building, KM 35, Lekki-Epe Expressway, Eputu, Opposite Mayfair Gardens Estate<br>Lagos',
+6.4642476, 3.7057343],
+                  ['Lirs Tax Station Shomolu','33/35 Salami Saibu Street, Shomolu<br>Lagos', 6.5451016, 3.3693813],
+                  ['Lirs Tax Station Sogunle','1, Workyard Road,PWD, Ikeja<br>Lagos', 6.5829359, 3.3381271],
+                  ['Lirs Tax Station Surulere','17, Alhaji Tokan Street, By Alaka Bus stop, Surulere<br>Lagos', 6.4916221, 3.3609025],
+                  ['Lirs Tax Station Tejuosho','19A, Tejuosho Road, Yaba, Lagos', 6.5072471, 3.3679821],
+                  ['Lirs Tax Station Campos',' 24A, Campbell Street, Lagos-Island<br>Lagos', 6.4523293, 3.391267],
+                  ['Lirs Tax Station Victoria Island 1','Itirin Court, Bishop Aboyade Cole, Victoria-Island<br>Lagos', 6.434346, 3.431225],
+                  ['Lirs Tax Station Victoria Island 2','Key Stone Bank. 707 Adeola Hopewell Street, Victoria -Island<br>Lagos', 6.4318295, 3.4269797],
+                  ['Lirs Tax Station Victoria Island 3','9, Ahmed Onibudo Street, Victoria-Isalnd, Lagos', 6.4359928, 3.4264506],
+                  ['Lirs Tax Station Alausa','82, Allen Avenue, Ikeja, Lagos', 6.6040414, 3.34898],
+                  ['Lirs Tax Station Iganmu','First Bank Plc Plot 4, Block C, Amuwo Odofin Industrial Layout, Badagry Expressway, Orile-Iganmu, Lagos', 6.4710553, 3.0954737],
+			    ];
+             
+		    var infowindow = new google.maps.InfoWindow();
+
+		    var marker, i;
+
+		    for (i = 0; i < locations.length; i++) {  
+		      marker = new google.maps.Marker({
+		        position: new google.maps.LatLng(locations[i][2], locations[i][3]),
+		        map: map,
+		        title:locations[i][0],
+		        icon:"{% static 'images/icons/marker.png' %}",
+                animation:google.maps.Animation.BOUNCE
+		      });
+
+		      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+		      	
+		        return function() {
+			      	$('.marker_title').html(locations[i][0]);
+			      	$('#address-div').html(locations[i][1]).css("flex-basic","100%");
+			      	$('.address').addClass('active')
+			      	$('.phone,.web').hide()
+		          //infowindow.setContent(locations[i][0]);
+		          //infowindow.open(map, marker);
+		        }
+		      })(marker, i));
+		    }
+
+
+        }
+        
+        
+    </script>
+
+
+	<!-- JS Files -->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/active.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/ajax-mail.js"></script>
+{% endblock %}
